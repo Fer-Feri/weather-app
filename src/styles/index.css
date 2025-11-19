@@ -1,26 +1,78 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&display=swap");
 
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Satoshi", "sans-serif";
+  /* --font-display: "Texturina"; */
+  --font-head: "Poppins";
 
-  --color-body: linear-gradient(
-    126deg,
-    rgba(130, 190, 194, 1) 0%,
-    rgba(180, 212, 207, 1) 50%,
-    rgba(199, 192, 181, 1) 100%
-  );
-}
+  --color-mint: #00bfa5; /* دکمه‌ها، لینک‌ها، آیکن‌های فعال، تیترهای کلیدی (مثل دمای فعلی) */
 
-body {
-  background: var(--color-body);
+  --color-text-primary: #e5e7eb; /* متن معمولی روی پس‌زمینه تیره	 */
+  --color-text-secondary: #9ca3af; /* توضیحات یا جزئیات کم‌اهمیت‌تر		 */
+  --color-heading: #34e3c3; /*تیترهای اصلی مثل “Weather Now”, “Today’s Forecast”		 */
 }
 
 @layer components {
   .card-weather {
     @apply grid w-full max-w-7xl auto-rows-min grid-cols-12 gap-4 rounded-3xl border-6 border-slate-700 bg-slate-900/70 p-6 shadow-2xl backdrop-blur-xl sm:grid-cols-1 md:grid-cols-12;
   }
+
+  .icons {
+    @apply hover:text-mint hover:border-mint/40 focus:text-mint active:text-mint h-10 w-10 cursor-pointer rounded-full border border-transparent bg-slate-800/60 p-2 text-gray-300 transition-all duration-300 hover:bg-slate-800/80 hover:shadow-[0_0_8px_#00BFA540] focus:drop-shadow-[0_0_6px_#00BFA5] active:drop-shadow-[0_0_8px_#00BFA5];
+  }
+
+  /* =============================================================== */
+  /* ==================>>>========HEADER STYLES=====<<<================================ */
+  /* =============================================================== */
+  header {
+    @apply col-span-12 row-span-1 flex flex-col gap-3 sm:flex-row sm:justify-between;
+
+    /* profile */
+    .profile {
+      @apply flex w-full items-center justify-between gap-3 sm:w-auto sm:justify-start sm:gap-4;
+
+      .profile-img {
+        @apply border-mint/40 h-12 w-12 rounded-full border transition-all duration-300 group-hover:opacity-90 group-hover:drop-shadow-[0_0_6px_#00BFA580] sm:h-14 sm:w-14;
+      }
+
+      .profile-hi {
+        @apply text-[8px] text-gray-400 sm:text-sm;
+      }
+
+      .profile-name {
+        @apply font-head group-hover:text-mint text-[10px] font-semibold text-gray-50 transition-colors duration-300 sm:text-base;
+      }
+    }
+
+    /* search && icons header */
+    .search-icons {
+      @apply flex w-full items-center gap-3 sm:w-auto sm:gap-4;
+
+      .search-input {
+        @apply focus-within:border-mint flex h-10 w-full items-center rounded-xl border border-transparent bg-slate-800/40 px-3 transition-all duration-300 focus-within:shadow-[0_0_10px_#00BFA550] hover:bg-slate-800/60 sm:h-12;
+
+        .icon-search {
+          @apply group-focus-within:text-mint h-5 w-5 text-gray-400 transition-colors duration-300 group-focus-within:drop-shadow-[0_0_6px_#00BFA5];
+        }
+
+        .seacrh-input {
+          @apply focus:text-mint ml-2 w-full bg-transparent text-xs text-gray-300 transition-colors duration-200 outline-none placeholder:text-gray-500;
+        }
+      }
+    }
+  }
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-text-primary);
 }
