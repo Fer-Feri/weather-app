@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+
+  --color-body: linear-gradient(
+    126deg,
+    rgba(130, 190, 194, 1) 0%,
+    rgba(180, 212, 207, 1) 50%,
+    rgba(199, 192, 181, 1) 100%
+  );
+}
+
+body {
+  background: var(--color-body);
+}
+
+@layer components {
+  .card-weather {
+    @apply grid w-full max-w-7xl auto-rows-min grid-cols-12 gap-4 rounded-3xl border-6 border-slate-700 bg-slate-900/70 p-6 shadow-2xl backdrop-blur-xl sm:grid-cols-1 md:grid-cols-12;
+  }
+}
