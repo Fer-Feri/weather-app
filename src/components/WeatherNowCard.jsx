@@ -9,7 +9,7 @@ const WeatherNowCard = () => {
       <div className="weather-now-card-left">
         {/* badge */}
         <div className="badge">
-          <Icons.mapPin className="icons text-mint cursor-default" />
+          <Icons.MapPin className="icons text-mint cursor-default" />
           <p className="text-gray-200">Iran, Sanandaj</p>
         </div>
 
@@ -31,9 +31,8 @@ const WeatherNowCard = () => {
       {/* weather now card RIGHT */}
       <div className="weather-now-card-right">
         {/* svg icon */}
-        <div className="flex">
-          {/* <SunCloudIcon className="w-52 text-red-600" /> */}
-          <img src={SunCloudIcon} alt="" className="w-36" />
+        <div className="flex w-36">
+          <img src={SunCloudIcon} alt="" className="w-full !cursor-default" />
         </div>
         {/* boxes */}
         <div className="mt-6 flex gap-4">

@@ -71,7 +71,7 @@ export const Icons = {
       </svg>
     );
   },
-  mapPin: ({ className }) => {
+  MapPin: ({ className }) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -90,6 +90,101 @@ export const Icons = {
           stroke-linecap="round"
           stroke-linejoin="round"
           d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+        />
+      </svg>
+    );
+  },
+  ZoomIn: ({ className }) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        className={className}
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6"
+        />
+      </svg>
+    );
+  },
+  ZoomOut: ({ className }) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        className={className}
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM13.5 10.5h-6"
+        />
+      </svg>
+    );
+  },
+  ToggleLayers: ({ className }) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        className={className}
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+        />
+      </svg>
+    );
+  },
+  ToggleVisibility: ({ className }) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        className={className}
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        />
+      </svg>
+    );
+  },
+  ToggleFullscreen: ({ className }) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        className={className}
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
         />
       </svg>
     );

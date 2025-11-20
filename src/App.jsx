@@ -1,6 +1,6 @@
 // import { useWeatherQuery } from './hooks/useWeatherQuery';
 import WeatherNowCard from "./components/WeatherNowCard";
-import MapTemperature from "./components/MapTemperature";
+import MapTemperature from "./components/map/MapTemperature";
 import Header from "./components/Header";
 import CityList from "./components/CityList";
 import HumidityCard from "./components/HumidityCard";
