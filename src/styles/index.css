@@ -105,6 +105,14 @@
       @apply flex flex-col items-end gap-3;
     }
   }
+
+  .near-city-card {
+    @apply flex items-center justify-between rounded-2xl bg-slate-900/70 p-4 backdrop-blur-xl transition-all duration-300 hover:bg-slate-800/70;
+  }
+
+  .humidity-card {
+    @apply row-span-4 mt-3 flex items-center justify-between rounded-2xl bg-gradient-to-br from-slate-900/80 to-indigo-800/60 p-5 backdrop-blur-xl transition-all duration-300 hover:bg-slate-800/70 sm:flex-row;
+  }
 }
 
 body {

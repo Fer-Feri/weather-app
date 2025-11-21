@@ -21,7 +21,7 @@ const App = () => {
         <Header />
         <WeatherNowCard />
         <MapTemperature />
-        <div className="col-span-12 row-span-6 rounded-2xl bg-green-500 md:col-span-4">
+        <div className="col-span-12 row-span-6 rounded-2xl md:col-span-4">
           <CityList />
           <HumidityCard />
         </div>
