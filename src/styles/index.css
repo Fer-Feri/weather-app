@@ -71,7 +71,7 @@
   /* ==================>>>========WeatherNowCard STYLES=====<<<================================ */
   /* =============================================================== */
   .weather-now-card {
-    @apply col-span-12 row-span-5 flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-500 p-5 md:col-span-6 lg:flex-row;
+    @apply relative col-span-12 row-span-5 flex min-h-[320px] flex-col justify-between overflow-hidden rounded-2xl p-6 md:col-span-6 md:min-h-[360px] lg:p-7;
     background-image: url("../images/weather-bg/sun.png");
     background-size: cover;
     background-position: center;

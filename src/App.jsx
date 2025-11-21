@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import CityList from "./components/CityList";
 import HumidityCard from "./components/HumidityCard";
 import DayPeriodsCard from "./components/DayPeriodsCard";
-import TommorowCard from "./components/TommorowCard";
+import TomorrowCard from "./components/TomorrowCard";
 
 const App = () => {
   // const { data, isLoading, error } = useWeatherQuery(35.6892, 51.389);
@@ -26,7 +26,7 @@ const App = () => {
           <HumidityCard />
         </div>
         <DayPeriodsCard />
-        <TommorowCard />
+        <TomorrowCard />
       </section>
     </main>
   );
