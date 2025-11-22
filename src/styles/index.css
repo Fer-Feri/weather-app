@@ -72,10 +72,6 @@
   /* =============================================================== */
   .weather-now-card {
     @apply relative col-span-12 row-span-5 flex min-h-[320px] flex-col justify-between overflow-hidden rounded-2xl p-6 md:col-span-6 md:min-h-[360px] lg:p-7;
-    background-image: url("../images/weather-bg/sun.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
     .weather-now-card-left {
       @apply flex flex-col;

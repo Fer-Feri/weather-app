@@ -1,7 +1,18 @@
+import { useState } from "react";
 import { Icons } from "../images/Icons";
 import profileImg from "../images/profile-2.png";
 
-const Header = () => {
+const Header = ({ onSearch }) => {
+  const [city, setCity] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (city.trim()) {
+      onSearch(city.trim()); // 👈 ارسال شهر به App
+      setCity("");
+    }
+  };
+
   return (
     <header>
       {/* profile + icons block */}
@@ -28,14 +39,19 @@ const Header = () => {
       {/* search + icons for desktop */}
       <section className="search-icons">
         {/* Search */}
-        <div className="search-input group">
-          <Icons.Search className="icon-search" />
+        <form onSubmit={handleSearch} className="search-input group">
+          <button type="submit">
+            <Icons.Search className="icon-search cursor-pointer" />
+          </button>
           <input
             type="search"
+            value={city}
             placeholder="Search Here ..."
             className="seacrh-input"
+            onChange={(e) => setCity(e.target.value)}
+            autoFocus
           />
-        </div>
+        </form>
 
         {/* icons only on desktop */}
         <div className="hidden items-center gap-2 sm:flex">

@@ -1,4 +1,5 @@
-// import { useWeatherQuery } from './hooks/useWeatherQuery';
+import { useWeather } from "./api/useWeather";
+import { useState } from "react";
 import WeatherNowCard from "./components/WeatherNowCard";
 import MapTemperature from "./components/map/MapTemperature";
 import Header from "./components/Header";
@@ -6,27 +7,38 @@ import CityList from "./components/CityList";
 import HumidityCard from "./components/HumidityCard";
 import DayPeriodsCard from "./components/DayPeriodsCard";
 import TomorrowCard from "./components/TomorrowCard";
+import LoadingSkeleton from "./components/LoadingSkeleton";
 
 const App = () => {
-  // const { data, isLoading, error } = useWeatherQuery(35.6892, 51.389);
+  const [searchCity, setSearchCity] = useState("Sanandaj");
 
-  // if (isLoading) return <p className="text-4xl text-green-500">در حال بارگزاری...</p>;
-  // if (error) return <p className="text-4xl text-red-500">خطا در دریافت اطلاعات</p>;
-
-  // const currentData = data?.current;
+  const { data, isLoading, error } = useWeather(searchCity);
 
   return (
     <main className="flex min-h-screen min-w-screen items-center justify-center bg-gradient-to-tr from-slate-800 via-slate-700 to-slate-900 p-6">
       <section className="card-weather">
-        <Header />
-        <WeatherNowCard />
-        <MapTemperature />
-        <div className="col-span-12 row-span-6 rounded-2xl md:col-span-4">
-          <CityList />
-          <HumidityCard />
-        </div>
-        <DayPeriodsCard />
-        <TomorrowCard />
+        <Header onSearch={setSearchCity} />
+
+        {isLoading && <LoadingSkeleton />}
+
+        {error && !isLoading && (
+          <div className="col-span-12 rounded-xl bg-red-900/20 p-6 text-center backdrop-blur-sm">
+            <p className="text-xl text-red-400">⚠️ خطا: {error.message}</p>
+          </div>
+        )}
+
+        {!isLoading && data && (
+          <>
+            <WeatherNowCard weatherData={data} />
+            <MapTemperature />
+            <div className="col-span-12 row-span-6 rounded-2xl md:col-span-4">
+              <CityList />
+              <HumidityCard />
+            </div>
+            <DayPeriodsCard />
+            <TomorrowCard />
+          </>
+        )}
       </section>
     </main>
   );

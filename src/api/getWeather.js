@@ -1,15 +1,17 @@
-export async function getWeather(lat, lon) {
-	const BASE_URL = 'https://api.open-meteo.com/v1/forecast';
+import axios from "axios";
 
-	const params = new URLSearchParams({
-		latitude: lat,
-		longitude: lon,
-		current: 'temperature_2m,weathercode',
-		timezone: 'auto',
-	});
+export async function getWeather(latitude, longitude) {
+  const response = await axios.get("https://api.open-meteo.com/v1/forecast", {
+    params: {
+      latitude,
+      longitude,
+      hourly: "temperature_2m,relativehumidity_2m,weathercode",
+      current_weather: true,
+    },
+  });
 
-	const response = await fetch(`${BASE_URL}?${params}`);
-	if (!response.ok) throw new Error('خطا در دریافت اطلاعات');
+  if (response.status !== 200)
+    throw new Error("خطا در دریافت اطلاعات آب و هوا");
 
-	return response.json();
+  return response.data;
 }
