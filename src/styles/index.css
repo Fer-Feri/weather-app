@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&display=swap");
 
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 @theme {
   --font-head: "Poppins";
@@ -108,6 +109,12 @@
 
   .humidity-card {
     @apply row-span-4 mt-3 flex items-center justify-between rounded-2xl bg-gradient-to-br from-slate-900/80 to-indigo-800/60 p-5 backdrop-blur-xl transition-all duration-300 hover:bg-slate-800/70 sm:flex-row;
+  }
+
+  /* حذف استایل‌های پیش‌فرض leaflet برای DivIcon */
+  .custom-weather-marker {
+    background: transparent !important;
+    border: none !important;
   }
 }
 

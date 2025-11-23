@@ -32,7 +32,7 @@ const App = () => {
         {!isLoading && data && (
           <>
             <WeatherNowCard weatherData={data} />
-            <MapTemperature />
+            <MapTemperature weatherData={data} />
             <div className="col-span-12 row-span-6 rounded-2xl md:col-span-4">
               <CityList nearCities={randomCitiesWeather} />
             </div>
