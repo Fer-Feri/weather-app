@@ -114,7 +114,7 @@ Weather App is a sleek and intuitive weather forecasting application built with 
 
 1. **Clone the repository**
 
-````bash
+```bash
 git clone https://github.com/fer-feri/weather-app.git
 cd weather-app
 
@@ -299,6 +299,7 @@ Distributed under the MIT License. See `LICENSE` file for more information.
 - Live Demo: [https://fer-feri.github.io/weather-app/](https://fer-feri.github.io/weather-app/)
 
 
+
 ---
 
 ## 🙏 Acknowledgments
@@ -308,6 +309,7 @@ Distributed under the MIT License. See `LICENSE` file for more information.
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 - [Vite](https://vitejs.dev/) - Build tool
 - Weather icons from various free sources
+
 
 ---
 
@@ -341,22 +343,7 @@ This project helped me learn:
 ---
 
 <div align="center">
-
-**Made with ❤️ by Fer-Feri**
-
-⭐ Star this repo if you find it useful!
-
-[Report Bug](https://github.com/fer-feri/weather-app/issues) · [Request Feature](https://github.com/fer-feri/weather-app/issues)
-
+  Made with ❤️ by Fershad
 </div>
 
-
----
-
-## 🔧 چطوری این README رو تو پروژه بذارم؟
-
-### مرحله ۱: ساخت فایل
-```bash
-# تو پوشه اصلی پروژه باش
-touch README.md
-````
+```
