@@ -342,8 +342,7 @@ This project helped me learn:
 
 ---
 
-<div align="center">
-  Made with ❤️ by Fershad
-</div>
+  🎉Made with ❤️ by Farshad
+
 
 ```
