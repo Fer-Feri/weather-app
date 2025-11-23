@@ -8,7 +8,8 @@ export async function getWeather(latitude, longitude) {
       current: "temperature_2m,weather_code",
       daily: "temperature_2m_max,temperature_2m_min",
       timezone: "auto",
-      hourly: "temperature_2m,relativehumidity_2m,weathercode",
+      hourly:
+        "temperature_2m,relativehumidity_2m,weathercode,rain,windspeed_10m",
       current_weather: true,
     },
   });

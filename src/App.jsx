@@ -36,7 +36,7 @@ const App = () => {
             <div className="col-span-12 row-span-6 rounded-2xl md:col-span-4">
               <CityList nearCities={randomCitiesWeather} />
             </div>
-            <DayPeriodsCard />
+            <DayPeriodsCard weatherData={data} />
             <TomorrowCard />
           </>
         )}
