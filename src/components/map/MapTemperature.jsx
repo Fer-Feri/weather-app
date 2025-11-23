@@ -15,15 +15,6 @@ const MapTemperature = () => {
         {/* Dark overlay for consistency */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-slate-900/40"></div>
       </div>
-
-      {/* Map Controls */}
-      <MapControls
-      // onZoomIn={() => console.log("zoom in")}
-      // onZoomOut={() => console.log("zoom out")}
-      // onToggleFullscreen={() => console.log("fullscreen")}
-      // onToggleLayers={() => console.log("toggle layers")}
-      // onToggleVisibility={() => console.log("toggle visibility")}
-      />
     </div>
   );
 };

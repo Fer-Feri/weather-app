@@ -37,7 +37,7 @@ const App = () => {
               <CityList nearCities={randomCitiesWeather} />
             </div>
             <DayPeriodsCard weatherData={data} />
-            <TomorrowCard />
+            <TomorrowCard weatherData={data} cityName={searchCity} />
           </>
         )}
       </section>

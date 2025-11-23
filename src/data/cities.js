@@ -1,4 +1,5 @@
 export const cities = [
+  // Existing
   "London",
   "Paris",
   "New York",
@@ -26,4 +27,28 @@ export const cities = [
   "Sanandaj",
   "Kermanshah",
   "Ahvaz",
+
+  // 🌩️ Stormy
+  "Bangkok",
+  "Houston",
+  "Manila",
+  "Jakarta",
+  "Karachi",
+
+  // ❄️ Snowy
+  "Oslo",
+  "Helsinki",
+  "Reykjavik",
+  "Denver",
+  "Yerevan",
+
+  // 🌧️ Rainy
+  "Seattle",
+  "Vancouver",
+  "Colombo",
+  "Kuala Lumpur",
+  "Bandung",
+  "Liverpool",
+  "Rasht",
+  "Kerman",
 ];

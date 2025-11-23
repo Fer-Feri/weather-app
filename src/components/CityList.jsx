@@ -4,8 +4,11 @@ import { getWeatherText } from "../utils/getWeatherText";
 const CityList = ({ nearCities }) => {
   return (
     <div className="row-span-6 flex flex-col gap-3 rounded-2xl">
-      {nearCities?.map((city) => (
-        <div className="flex items-center justify-between rounded-xl bg-slate-900/70 p-4 backdrop-blur-xl transition-all duration-300 hover:bg-slate-900/80 md:p-5">
+      {nearCities?.map((city, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-between rounded-xl bg-slate-900/70 p-4 backdrop-blur-xl transition-all duration-300 hover:bg-slate-900/80 md:p-5"
+        >
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-800/50 p-2 md:h-14 md:w-14">
               <img
